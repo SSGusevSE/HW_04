@@ -154,9 +154,9 @@ print(f"  MLP MSE:      {mlp_mse:.6f}")
 print(f"  LSTM MSE:     {lstm_mse:.6f}")
 
 # ============================================================
-# 9. Авторегрессионное предсказание на январь (10 дней)
+# 9. Авторегрессионное предсказание на весь январь
 # ============================================================
-PREDICT_DAYS = 10
+PREDICT_DAYS = len(january_prices)
 
 # Берём последние WINDOW дней декабря
 last_window = torch.tensor(scaled_train[-WINDOW:], dtype=torch.float32)
